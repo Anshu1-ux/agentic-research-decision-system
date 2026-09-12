@@ -1,0 +1,10 @@
+A phased migration strategy from a data warehouse to a lakehouse typically follows
+the Medallion Architecture: Bronze (raw ingested data), Silver (cleaned and
+conformed data), and Gold (business-level aggregates ready for BI tools).
+
+Best practice is to run the lakehouse and legacy warehouse in parallel during
+migration, validating that Gold-layer outputs match legacy warehouse reports
+before cutting over any single team or dashboard. Attempting a full cutover in
+one step is the most common cause of failed lakehouse migrations, since
+undiscovered edge cases in legacy ETL logic often only surface once real users
+depend on the new system.

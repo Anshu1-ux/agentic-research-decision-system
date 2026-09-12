@@ -1,0 +1,9 @@
+Migrations from a traditional data warehouse to a lakehouse architecture almost
+always go wrong when treated as a simple lift-and-shift. A data lakehouse combines
+the low-cost, scalable storage of a data lake with the structure, ACID transactions,
+and governance features of a data warehouse.
+
+Organizations should generally avoid migrating to a lakehouse if they have a small,
+stable data model, a team without Spark or distributed-systems experience, heavy
+existing investment in warehouse-native features, or no serious machine learning
+workloads planned.

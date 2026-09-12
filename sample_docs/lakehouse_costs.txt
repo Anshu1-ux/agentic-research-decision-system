@@ -1,0 +1,12 @@
+Cost comparisons between traditional data warehouses and lakehouse architectures
+vary significantly by workload. Data warehouses typically charge for both storage
+and compute together, often at premium rates, while lakehouses decouple storage
+(cheap object storage like S3) from compute, letting organizations scale each
+independently.
+
+For read-heavy analytics workloads with irregular usage patterns, a lakehouse can
+reduce total cost of ownership by 30-50% compared to a traditional warehouse,
+mainly because idle compute isn't billed the same way. However, for small,
+consistently-loaded workloads, a traditional warehouse's simpler pricing model
+can sometimes be cheaper due to lakehouse operational overhead (compaction,
+file management, cataloging).
